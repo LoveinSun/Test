@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>来者可追</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<template id ="account">
+			<div>
+				<h3>登陆{{msg}}</h3>
+				<a href = "#" @click ='login'>账号</a>
+				<a href="baidu.com">密码</a>
+			</div>
+		</template>
+		<div id = "app">
+			<a1></a1>
+		</div>
+	</body>
+	<script type = text/javascript>
+		Vue.component('a1',{
+			template:'#account',
+			data:function(){
+				return{
+					msg:'hello world'
+				}
+			},
+			methods:{
+				login:function(){
+					console.log(".....")
+				}
+			}
+		})
+		new Vue({
+			el :"#app",
+			data:{
+			}
+		})
+	</script>
+</html>
